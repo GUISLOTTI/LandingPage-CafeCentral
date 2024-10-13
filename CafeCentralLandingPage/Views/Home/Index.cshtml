@@ -1,0 +1,23 @@
+﻿<h2>Encomende seu Bolo ou Marmitinha Fitness</h2>
+<form asp-action="EnviarPedido" method="post">
+    <label for="nomeCliente">Nome:</label>
+    <input type="text" name="nomeCliente" required />
+    <br />
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" name="telefone" required />
+    <br />
+
+    <label for="tipoPedido">Tipo de Pedido:</label>
+    <select name="tipoPedido">
+        <option value="Bolo">Bolo Inteiro</option>
+        <option value="Marmitinha">Marmitinha Fitness</option>
+    </select>
+    <br />
+
+    <label for="detalhesPedido">Detalhes:</label>
+    <textarea name="detalhesPedido" rows="4"></textarea>
+    <br />
+
+    <button type="submit">Enviar Pedido</button>
+</form>
