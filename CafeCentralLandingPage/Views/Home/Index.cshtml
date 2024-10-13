@@ -1,23 +1,87 @@
-﻿<h2>Encomende seu Bolo ou Marmitinha Fitness</h2>
-<form asp-action="EnviarPedido" method="post">
-    <label for="nomeCliente">Nome:</label>
-    <input type="text" name="nomeCliente" required />
-    <br />
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Central</title>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header>
+    <h1>Café Central</h1>
+    <p>Encomende seus bolos e marmitinhas fitness!</p>
+</header>
 
-    <label for="telefone">Telefone:</label>
-    <input type="tel" name="telefone" required />
-    <br />
+<section id="bolos">
+    <h2>Bolos Inteiros</h2>
+    <div class="bolo">
+        <img src="img/bolochocolate.jfif" alt="Bolo de Chocolate">
+        <h3>Bolo de Chocolate</h3>
+        <p>R$ 120,00</p>
+        <button onclick="enviarPedido('Bolo de Chocolate', 120)">Encomendar</button>
+    </div>
+    <div class="bolo">
+        <img src="img/bolocenoura2.jpg" alt="Bolo de Cenoura">
+        <h3>Bolo de Cenoura</h3>
+        <p>R$ 90,00</p>
+        <button onclick="enviarPedido('Bolo de Cenoura', 90)">Encomendar</button>
+    </div>
+    <div class="bolo">
+        <img src="img/bololimao.jpg" alt="Torta de Limão">
+        <h3>Torta de Limão</h3>
+        <p>R$ 110,00</p>
+        <button onclick="enviarPedido('Bolo de Limão', 110)">Encomendar</button>
+    </div>
+</section>
 
-    <label for="tipoPedido">Tipo de Pedido:</label>
-    <select name="tipoPedido">
-        <option value="Bolo">Bolo Inteiro</option>
-        <option value="Marmitinha">Marmitinha Fitness</option>
-    </select>
-    <br />
+<section id="marmitas">
+    <img src="img/marmitinha.jpg" alt="Torta de Limão">
+    <h2>Marmitinhas Fitness</h2>
+    <form id="marmitasForm">
+        <label for="proteina">Escolha 1 Proteína:</label>
+        <select id="proteina" required>
+            <option value="">Selecione</option>
+            <option value="Frango">Frango</option>
+            <option value="Carne Moída">Carne Moída</option>
+            <option value="Bisteca Suína">Bisteca Suína</option>
+        </select>
 
-    <label for="detalhesPedido">Detalhes:</label>
-    <textarea name="detalhesPedido" rows="4"></textarea>
-    <br />
+        <label for="carboidrato1">Escolha 1 Carboidrato:</label>
+        <select id="carboidrato1" required>
+            <option value="">Selecione</option>
+            <option value="Arroz">Arroz</option>
+            <option value="Lentilha">Lentilha</option>
+            <option value="Batata Doce">Batata Doce</option>
+        </select>
 
-    <button type="submit">Enviar Pedido</button>
-</form>
+        <label for="carboidrato2">Escolha 1 Carboidrato:</label>
+        <select id="carboidrato2" required>
+            <option value="">Selecione</option>
+            <option value="Arroz">Arroz</option>
+            <option value="Lentilha">Lentilha</option>
+            <option value="Batata Doce">Batata Doce</option>
+        </select>
+
+        <label for="verdura1">Escolha 1 Verdura:</label>
+        <select id="verdura1" required>
+            <option value="">Selecione</option>
+            <option value="Brócolis">Brócolis</option>
+            <option value="Cenoura">Cenoura</option>
+            <option value="Espinafre">Espinafre</option>
+        </select>
+
+        <label for="verdura2">Escolha 1 Verdura:</label>
+        <select id="verdura2" required>
+            <option value="">Selecione</option>
+            <option value="Brócolis">Brócolis</option>
+            <option value="Cenoura">Cenoura</option>
+            <option value="Espinafre">Espinafre</option>
+        </select>
+
+        <button type="submit">Enviar Pedido</button>
+    </form>
+</section>
+
+<script src="js/site.js"></script>
+</body>
+</html>

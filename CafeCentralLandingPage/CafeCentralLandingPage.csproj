@@ -6,4 +6,9 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Content Remove="wwwroot\img\bolocenoura.png" />
+      <Content Remove="wwwroot\img\bolochocolate.webp" />
+    </ItemGroup>
+
 </Project>
